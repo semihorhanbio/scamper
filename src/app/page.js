@@ -13,6 +13,8 @@ function App() {
   const [player1Score, setPlayer1Score] = useState(0);
   const [player2Score, setPlayer2Score] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(1);
+  const [questionVideo, setQuestionVideo] = useState("CUAhpiRUOy0");
+  const [answerVideo, setAnswerVideo] = useState("q5p0c6VnGqI");
 
   const [waitingToAdvance, setWaitingToAdvance] = useState(false);
 
@@ -110,7 +112,8 @@ function App() {
           </button>
         )}
       </div>
-      <Video videoId='CUAhpiRUOy0' />
+      <Video videoId={questionVideo} />
+      <Video videoId={answerVideo} />
     </div>
   );
 }
