@@ -41,6 +41,34 @@ function App() {
     setWaitingToAdvance(false);
   };
 
+  const addScoreToOtherPlayer = () => {
+    if (currentPlayer === 1) {
+      setPlayer1Score(player1Score - 10);
+      setPlayer2Score(player2Score + 10);
+    } else {
+      setPlayer2Score(player2Score - 10);
+      setPlayer1Score(player1Score + 10);
+    }
+  };
+
+  const subtractScoreFromOtherPlayer = () => {
+    if (currentPlayer === 1) {
+      setPlayer1Score(player1Score + 10);
+      setPlayer2Score(player2Score - 10);
+    } else {
+      setPlayer2Score(player2Score - 10);
+      setPlayer1Score(player1Score + 10);
+    }
+  };
+
+  const resetScore = () => {
+    if (currentPlayer === 1) {
+      setPlayer1Score(0);
+    } else {
+      setPlayer2Score(0);
+    }
+  };
+
   if (currentQuestionIdx >= allQuestions.questions.length)
     return (
       <Reset
