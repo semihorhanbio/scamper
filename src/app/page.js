@@ -1,121 +1,53 @@
-"use client";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
-import questions from "@/questions.json";
-import { useState } from "react";
-import QuestionComp from "@/components/question";
-import Reset from "@/components/reset";
-import Video from "@/components/video";
+const topics = [
+  "Enerji Verimliliği",
+  "Bilinçli Tüketim",
+  "Geri Dönüşüm",
+  "Sürdürülebilir Ulaşım",
+  "Yenilenebilir Enerji",
+  "Atık Su Yönetimi",
+];
 
-function App() {
-  const allQuestions = questions;
-
-  const [currentQuestionIdx, setCurrentQuestionIdx] = useState(0);
-  const [player1Score, setPlayer1Score] = useState(0);
-  const [player2Score, setPlayer2Score] = useState(0);
-  const [currentPlayer, setCurrentPlayer] = useState(1);
-  const [questionVideo, setQuestionVideo] = useState("CUAhpiRUOy0");
-  const [answerVideo, setAnswerVideo] = useState("q5p0c6VnGqI");
-
-  const [waitingToAdvance, setWaitingToAdvance] = useState(false);
-
-  const onSubmit = (correct) => {
-    if (correct) {
-      if (currentPlayer === 1) {
-        setPlayer1Score(player1Score + 1);
-      } else {
-        setPlayer2Score(player2Score + 1);
-      }
-    }
-    setWaitingToAdvance(true);
-  };
-
-  const advance = () => {
-    setCurrentPlayer(currentPlayer === 1 ? 2 : 1);
-    setWaitingToAdvance(false);
-    setCurrentQuestionIdx(currentQuestionIdx + 1);
-  };
-
-  const reset = () => {
-    setCurrentQuestionIdx(0);
-    setPlayer1Score(0);
-    setPlayer2Score(0);
-    setCurrentPlayer(1);
-    setWaitingToAdvance(false);
-  };
-
-  const addScoreToOtherPlayer = () => {
-    if (currentPlayer === 1) {
-      setPlayer1Score(player1Score - 10);
-      setPlayer2Score(player2Score + 10);
-    } else {
-      setPlayer2Score(player2Score - 10);
-      setPlayer1Score(player1Score + 10);
-    }
-  };
-
-  const subtractScoreFromOtherPlayer = () => {
-    if (currentPlayer === 1) {
-      setPlayer1Score(player1Score + 10);
-      setPlayer2Score(player2Score - 10);
-    } else {
-      setPlayer2Score(player2Score - 10);
-      setPlayer1Score(player1Score + 10);
-    }
-  };
-
-  const resetScore = () => {
-    if (currentPlayer === 1) {
-      setPlayer1Score(0);
-    } else {
-      setPlayer2Score(0);
-    }
-  };
-
-  if (currentQuestionIdx >= allQuestions.questions.length)
-    return (
-      <Reset
-        player1Score={player1Score}
-        player2Score={player2Score}
-        onPress={reset}
-      />
-    );
-
+function Home() {
   return (
-    <div className='flex flex-col justify-around items-center sm:flex-row sm:justify-evenly pt-3'>
-      <div className='p-4 flex flex-col w-1/2'>
-        <div className='flex justify-evenly items-center mb-6'>
-          <h2
-            className={`text-2xl font-bold text-white ${
-              currentPlayer === 1 ? "bg-red-600" : ""
-            }`}
-          >
-            Team 1
+    <>
+      <header className='flex flex-col items-center text-center px-16 pt-14 pb-4 bg-[#EFE607]'>
+        <h1 className='text-8xl text-center text-neutral-800 text-opacity-80 max-md:max-w-full max-md:text-4xl'>
+          SCAMPERESTLER
+        </h1>
+        <p className='mt-20 text-5xl text-yellow-950 max-md:mt-10 max-md:max-w-full max-md:text-4xl'>
+          Sürdürülebilir Çevre için Mühendislik Oyunu
+        </p>
+        <Button className='p-5 mt-14 text-xl font-semibold text-white aspect-[4.65] backdrop-blur-[2px] fill-neutral-800 max-md:px-5 max-md:mt-10'>
+          Tasarımı Seç
+        </Button>
+      </header>
+      <main className='flex flex-col gap-8 md:flex-row md:justify-evenly p-5 bg-white'>
+        <section className='flex flex-col justify-evenly text-6xl font-bold whitespace-nowrap max-md:text-4xl'>
+          <h2 className='bg-clip-text max-md:text-4xl'>Düşün</h2>
+          <h2 className='text-blue-600 max-md:mt-10 max-md:text-4xl'>
+            Tasarla
           </h2>
-          <h2
-            className={`text-2xl font-bold text-white ${
-              currentPlayer === 2 ? "bg-red-600" : ""
-            }`}
-          >
-            Team 2
+          <h2 className='text-6xl font-bold text-sky-900 max-md:mt-10 max-md:max-w-full max-md:text-4xl'>
+            Yeniden Tasarla
           </h2>
-        </div>
-        <QuestionComp
-          question={allQuestions.questions[currentQuestionIdx]}
-          onSubmit={onSubmit}
-        />
-        {waitingToAdvance && (
-          <button
-            onClick={advance}
-            className='mt-4 bg-gray-900 text-white font-bold border border-gray-800 rounded-lg hover:border-blue-500'
-          >
-            Next Question...
-          </button>
-        )}
-      </div>
-      <Video videoId={questionVideo} />
-      <Video videoId={answerVideo} />
-    </div>
+        </section>
+        <section className='grid grid-cols-2 sm:grid-cols-3 gap-2'>
+          {topics.map((topic, idx) => (
+            <Link
+              key={idx}
+              href='/scamper'
+              className='rounded-lg border border-black border-solid bg-[#1251F1] max-w-[155px] min-h-[142px] text-center text-xl font-bold text-white hover:bg-blue-900'
+            >
+              {topic}
+            </Link>
+          ))}
+        </section>
+      </main>
+    </>
   );
 }
 
-export default App;
+export default Home;
