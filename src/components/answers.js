@@ -15,7 +15,7 @@ function Answers({
   };
 
   return (
-    <div className='flex justify-between space-x-4'>
+    <div className='flex flex-col justify-between gap-2'>
       {choices.map((choice, idx) => {
         return (
           <Answer

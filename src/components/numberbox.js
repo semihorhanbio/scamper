@@ -23,7 +23,7 @@ const NumberBox = ({
           {number}
         </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className='max-w-7xl max-h-full'>
         <DialogHeader>
           <DialogDescription>
             <QuestionComp

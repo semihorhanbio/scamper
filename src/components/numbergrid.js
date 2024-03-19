@@ -3,6 +3,8 @@ import NumberBox from "@/components/numberbox";
 import GainPoints from "@/components/gainpoints";
 import ExchangePoints from "@/components/exchangepoints";
 import ResetGame from "@/components/reset";
+import GainCopy from "@/components/gaincopy";
+import ExchangeCopy from "@/components/exchangecopy";
 import { useState } from "react";
 const NumberGrid = ({ onSubmit, addScoreToPlayer, togglePoints, reset }) => {
   const allQuestions = questions.questions;
@@ -25,6 +27,8 @@ const NumberGrid = ({ onSubmit, addScoreToPlayer, togglePoints, reset }) => {
       <GainPoints addScoreToPlayer={addScoreToPlayer} />
       <ExchangePoints togglePoints={togglePoints} />
       <ResetGame reset={reset} />
+      <ExchangeCopy togglePoints={togglePoints} />
+      <GainCopy addScoreToPlayer={addScoreToPlayer} />
     </div>
   );
 };

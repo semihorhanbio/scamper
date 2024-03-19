@@ -23,15 +23,15 @@ function QuestionComp({
     }
   };
   return (
-    <div className='text-center p-1'>
-      <div className='bg-[#2e51bb] p-4 text-white font-bold text-xl rounded-t-md'>
+    <div className='text-center'>
+      <div className='bg-[#2e51bb] px-72 py-12 text-white font-bold text-6xl rounded-t-md'>
         {id}
       </div>
       {showAnswerVideo ? (
         <>
           <Video videoId={answerVideoId} autoplay={0} />
           <div
-            className={`text-white rounded-sm mt-2 w-1/4 mx-auto ${
+            className={`text-white rounded-sm mt-2 w-1/4 px-4 py-2 mx-auto text-3xl ${
               responseText === "Doğru" ? "bg-green-600" : "bg-red-600"
             }`}
           >
@@ -40,7 +40,7 @@ function QuestionComp({
         </>
       ) : (
         <div className='bg-white rounded-b-md shadow-md'>
-          <p className='text-lg my-4'>{question}</p>
+          <p className='text-4xl px-72 my-16'>{question}</p>
           <Answers
             choices={choices}
             onSubmit={onSubmit}

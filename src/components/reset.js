@@ -19,9 +19,9 @@ const ResetGame = ({ reset, player1Score, player2Score }) => {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogDescription className='text-center'>
+          <DialogDescription className='text-center w-full h-full'>
             <Image
-              className=''
+              className='h-64 w-120 mx-auto'
               src='/reset.png'
               alt='reset game'
               width={700}

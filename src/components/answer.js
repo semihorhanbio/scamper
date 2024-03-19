@@ -8,6 +8,7 @@ function Answer({
 }) {
   return (
     <Button
+      size='lg'
       onClick={() => {
         onPress();
         setIsQuestionDisabled((prev) => {
@@ -17,9 +18,9 @@ function Answer({
         });
       }}
       disabled={isQuestionDisabled[number - 1]}
-      className='bg-[#2e51bb] text-white py-2 px-4 rounded-md'
+      className='bg-[#2e51bb] py-6 px-4 rounded-md text-lg'
     >
-      <span>{text}</span>
+      {text}
     </Button>
   );
 }

@@ -8,38 +8,36 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-const ExchangePoints = ({ togglePoints }) => {
-  const [disabled, setDisabled] = useState(false);
+const GainCopy = ({ addScoreToPlayer }) => {
+  const [isDisabled, setDisabled] = useState(false);
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button className='justify-center items-center text-8xl px-16 pt-24 pb-20 rounded-lg max-md:px-5 max-md:text-4xl bg-blue-500 hover:bg-blue-700'>
-          7
+          10
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogDescription className='text-center'>
             <div className='bg-[#2e51bb] p-4 text-center text-white font-bold text-xl rounded-t-md'>
-              7
+              10
             </div>
             <Image
-              className='h-72 w-screen mx-auto'
-              src='/togglepoints.png'
+              className='h-64 w-screen mx-auto'
+              src='/gainpoints.png'
               alt='Gain Points'
-              width={700}
-              height={700}
+              width={1700}
+              height={1700}
             />
-            <p className='text-xl font-semibold mb-4'>
-              Karşı takımdan 15 puan al
-            </p>
+            <p className='text-xl font-semibold mb-4'>15 Puan Kazan</p>
             <Button
               className='bg-blue-600 text-white hover:bg-blue-800'
               onClick={() => {
-                togglePoints(15);
+                addScoreToPlayer(15);
                 setDisabled(true);
               }}
-              disabled={disabled}
+              disabled={isDisabled}
             >
               Tamam
             </Button>
@@ -50,4 +48,4 @@ const ExchangePoints = ({ togglePoints }) => {
   );
 };
 
-export default ExchangePoints;
+export default GainCopy;
