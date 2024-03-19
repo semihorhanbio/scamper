@@ -8,41 +8,40 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-const ResetGame = ({ reset, player1Score, player2Score }) => {
+const ExchangePoints = ({ togglePoints }) => {
   const [disabled, setDisabled] = useState(false);
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button className='justify-center items-center text-8xl px-16 pt-24 pb-20 rounded-lg max-md:px-5 max-md:text-4xl bg-blue-500 hover:bg-blue-700'>
-          8
+          7
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogDescription className='text-center'>
+            <div className='bg-[#2e51bb] p-4 text-center text-white font-bold text-xl rounded-t-md'>
+              7
+            </div>
             <Image
               className=''
-              src='/reset.png'
-              alt='reset game'
+              src='/togglepoints.png'
+              alt='Gain Points'
               width={700}
               height={700}
             />
             <p className='text-xl font-semibold mb-4'>
-              {player1Score === player2Score
-                ? "Tebrikler takımlar berabere!"
-                : player1Score > player2Score
-                ? "Tebrikler, 1. takım kazandı!"
-                : "Tebrikler, 2. takım kazandı!"}
+              Karşı takımdan 15 puan al
             </p>
             <Button
               className='bg-blue-600 text-white hover:bg-blue-800'
               onClick={() => {
-                reset();
+                togglePoints(15);
                 setDisabled(true);
               }}
               disabled={disabled}
             >
-              Oyun Bitti
+              Tamam
             </Button>
           </DialogDescription>
         </DialogHeader>
@@ -51,4 +50,4 @@ const ResetGame = ({ reset, player1Score, player2Score }) => {
   );
 };
 
-export default ResetGame;
+export default ExchangePoints;

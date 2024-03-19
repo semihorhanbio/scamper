@@ -1,15 +1,25 @@
 import { Button } from "@/components/ui/button";
-
-function Answer(props) {
-  const style = props.color ? { color: props.color } : {};
-
+function Answer({
+  text,
+  onPress,
+  number,
+  isQuestionDisabled,
+  setIsQuestionDisabled,
+}) {
   return (
     <Button
-      onClick={props.onPress}
-      disabled={props.disabled}
-      className='bg-gray-900 text-white font-sans font-extrabold border border-black rounded-lg hover:border-blue-500'
+      onClick={() => {
+        onPress();
+        setIsQuestionDisabled((prev) => {
+          const newIsQuestionDisabled = [...prev];
+          newIsQuestionDisabled[number - 1] = true;
+          return newIsQuestionDisabled;
+        });
+      }}
+      disabled={isQuestionDisabled[number - 1]}
+      className='bg-[#2e51bb] text-white py-2 px-4 rounded-md'
     >
-      <span style={style}>{props.text}</span>
+      <span>{text}</span>
     </Button>
   );
 }

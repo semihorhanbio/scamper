@@ -1,34 +1,39 @@
 {
     "questions": [
       {
-        "question": "What is my Name?",
-        "choices": ["Tim", "John"],
-        "correctAnswerIdx": 0
+        "id": "1",
+        "question": "Güneş paneli traktörün çatısına yerleştirilirse, traktörün elektrik depolamasında ne değişir?",
+        "choices": ["Daha yavaş elektrik depolar", "Daha fazla elektrik depolar"],
+        "correctAnswerIdx": 1,
+        "answerVideoId": "6Rwagw8Ulyo"
       },
       {
-        "question": "What is my last Name?",
-        "choices": ["Ruscica", "Smith"],
-        "correctAnswerIdx": 0
+        "id": "2",
+        "question": "Öğle saatinde güneş ışınları dik geldiğinde, traktörün elektrik depolama hızı nasıl olur?",
+        "choices": ["Daha uzun sürer", "Süre değişmez"],
+        "correctAnswerIdx": 0,
+        "answerVideoId": "oprBG1UqPr4"
       },
       {
-        "question": "What is the capital of France?",
-        "choices": ["Paris", "London"],
-        "correctAnswerIdx": 0
+        "id": "3",
+        "question": "Traktördeki güneş paneli sayısı artarsa ne olur?",
+        "choices": ["Daha hızlı elektrik depolar", "Daha fazla yol gider"],
+        "correctAnswerIdx": 0,
+        "answerVideoId": "7fKS-v4uOgQ"
       },
       {
-        "question": "What is the capital of Germany?",
-        "choices": ["Berlin", "London"],
-        "correctAnswerIdx": 0
+        "id": "4",
+        "question": "Traktörün 10 cm’den daha fazla yol gitmesini istersek, tasarımda neyi değiştirirsin?",
+        "choices": ["Batarya sayısını artırmak", "Panel sayısını artırmak"],
+        "correctAnswerIdx": 0,
+        "answerVideoId": "ivAC9B2iPmY"
       },
       {
-        "question": "What is the capital of Italy?",
-        "choices": ["Rome", "Madrid"],
-        "correctAnswerIdx": 0
-      },
-      {
-        "question": "What is the capital of Spain?",
-        "choices": ["Madrid", "Lisbon"],
-        "correctAnswerIdx": 0
+        "id": "5",
+        "question": "Traktördeki iki bataryadan biri çıkarılırsa, aracın gittiği yol nasıl olur?",
+        "choices": ["Yolun yarısını gider", "Aynı yolu alır"],
+        "correctAnswerIdx": 0,
+        "answerVideoId": "FP-UxOEuSAE"
       }
     ]
   }

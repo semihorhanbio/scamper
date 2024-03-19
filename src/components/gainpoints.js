@@ -8,41 +8,38 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import Image from "next/image";
-const ResetGame = ({ reset, player1Score, player2Score }) => {
-  const [disabled, setDisabled] = useState(false);
+const GainPoints = ({ addScoreToPlayer }) => {
+  const [isDisabled, setDisabled] = useState(false);
   return (
     <Dialog>
       <DialogTrigger asChild>
         <Button className='justify-center items-center text-8xl px-16 pt-24 pb-20 rounded-lg max-md:px-5 max-md:text-4xl bg-blue-500 hover:bg-blue-700'>
-          8
+          6
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogDescription className='text-center'>
+            <div className='bg-[#2e51bb] p-4 text-center text-white font-bold text-xl rounded-t-md'>
+              6
+            </div>
             <Image
               className=''
-              src='/reset.png'
-              alt='reset game'
-              width={700}
-              height={700}
+              src='/gainpoints.png'
+              alt='Gain Points'
+              width={1700}
+              height={1700}
             />
-            <p className='text-xl font-semibold mb-4'>
-              {player1Score === player2Score
-                ? "Tebrikler takımlar berabere!"
-                : player1Score > player2Score
-                ? "Tebrikler, 1. takım kazandı!"
-                : "Tebrikler, 2. takım kazandı!"}
-            </p>
+            <p className='text-xl font-semibold mb-4'>15 Puan Kazan</p>
             <Button
               className='bg-blue-600 text-white hover:bg-blue-800'
               onClick={() => {
-                reset();
+                addScoreToPlayer(15);
                 setDisabled(true);
               }}
-              disabled={disabled}
+              disabled={isDisabled}
             >
-              Oyun Bitti
+              Tamam
             </Button>
           </DialogDescription>
         </DialogHeader>
@@ -51,4 +48,4 @@ const ResetGame = ({ reset, player1Score, player2Score }) => {
   );
 };
 
-export default ResetGame;
+export default GainPoints;

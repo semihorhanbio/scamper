@@ -1,36 +1,30 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import Answer from "@/components/answer";
 
-function Answers(props) {
-  const [showAnswer, setShowAnswer] = useState(false);
-
-  useEffect(() => {
-    setShowAnswer(false);
-  }, [props.question]);
-
+function Answers({
+  choices,
+  onSubmit,
+  correctAnswerIdx,
+  changeToAnswerView,
+  number,
+  isQuestionDisabled,
+  setIsQuestionDisabled,
+}) {
   const onPress = (idx) => {
-    setShowAnswer(true);
-    props.onSubmit(props.question.correctAnswerIdx === idx);
+    onSubmit(correctAnswerIdx === idx);
+    changeToAnswerView(correctAnswerIdx === idx);
   };
 
   return (
-    <div className='flex items-center flex-wrap justify-evenly'>
-      {props.question.choices.map((choice, idx) => {
-        let color = "";
-
-        if (showAnswer && props.question.correctAnswerIdx === idx)
-          color = "green";
-        else if (showAnswer) color = "red";
-
+    <div className='flex justify-between space-x-4'>
+      {choices.map((choice, idx) => {
         return (
           <Answer
+            key={idx}
             text={choice}
             onPress={() => onPress(idx)}
-            color={color}
-            disabled={showAnswer}
-            key={idx}
+            number={number}
+            isQuestionDisabled={isQuestionDisabled}
+            setIsQuestionDisabled={setIsQuestionDisabled}
           />
         );
       })}
