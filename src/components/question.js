@@ -1,6 +1,7 @@
 import Video from "@/components/video";
 import Answers from "@/components/answers";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
 
 function QuestionComp({
   id,
@@ -12,6 +13,8 @@ function QuestionComp({
   number,
   isQuestionDisabled,
   setIsQuestionDisabled,
+  setDialogBackground,
+  setOpenDialog,
 }) {
   const [showAnswerVideo, setShowAnswerVideo] = useState(false);
   const [responseText, setResponseText] = useState("Yanlış");
@@ -30,13 +33,17 @@ function QuestionComp({
       {showAnswerVideo ? (
         <>
           <Video videoId={answerVideoId} autoplay={0} />
-          <div
+          <Button
+            onClick={() => {
+              setDialogBackground("100");
+              setOpenDialog(false);
+            }}
             className={`text-white rounded-sm mt-2 w-1/4 px-4 py-2 mx-auto text-3xl ${
               responseText === "Doğru" ? "bg-green-600" : "bg-red-600"
             }`}
           >
             {responseText}
-          </div>
+          </Button>
         </>
       ) : (
         <div className='bg-white rounded-b-md shadow-md'>

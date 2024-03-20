@@ -54,8 +54,8 @@ function Game() {
     <div className='flex flex-col justify-center'>
       <div className='flex flex-col justify-center w-full bg-neutral-200 max-md:max-w-full'>
         <div className='flex flex-col pb-12 w-full max-md:max-w-full'>
-          <header className='flex flex-col justify-center bg-[#EFE607] items-center px-20 pt-10 pb-3 w-full max-md:px-5 max-md:max-w-full'>
-            <div className='flex gap-5 max-md:flex-col max-md:gap-0'>
+          <header className='flex flex-col bg-[#EFE607] items-center px-20 pt-10 pb-3 w-full max-md:px-5 max-md:max-w-full'>
+            <div className='flex justify-between gap-5 max-md:flex-col max-md:gap-0'>
               <Team teamName='Takım 1' score={player1Score} />
               <Video videoId={questionVideo} autoplay={autoplay} />
               <Team teamName='Takım 2' score={player2Score} />
