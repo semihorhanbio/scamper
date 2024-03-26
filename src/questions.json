@@ -1,60 +1,60 @@
 {
-    "questions": [
-      {
-        "id": "1",
-        "question": "Güneş paneli traktörün çatısına yerleştirilirse, traktörün elektrik depolamasında ne değişir?",
-        "choices": ["Daha yavaş elektrik depolar", "Daha fazla elektrik depolar"],
-        "correctAnswerIdx": 1,
-        "answerVideoId": "6Rwagw8Ulyo"
-      },
-      {
-        "id": "2",
-        "question": "Öğle saatinde güneş ışınları dik geldiğinde, traktörün elektrik depolama hızı nasıl olur?",
-        "choices": ["Daha uzun sürer", "Süre değişmez"],
-        "correctAnswerIdx": 0,
-        "answerVideoId": "oprBG1UqPr4"
-      },
-      {
-        "id": "3",
-        "question": "Traktördeki güneş paneli sayısı artarsa ne olur?",
-        "choices": ["Daha hızlı elektrik depolar", "Daha fazla yol gider"],
-        "correctAnswerIdx": 0,
-        "answerVideoId": "7fKS-v4uOgQ"
-      },
-      {
-        "id": "4",
-        "question": "Traktörün 10 cm’den daha fazla yol gitmesini istersek, tasarımda neyi değiştirirsin?",
-        "choices": ["Batarya sayısını artırmak", "Panel sayısını artırmak"],
-        "correctAnswerIdx": 0,
-        "answerVideoId": "ivAC9B2iPmY"
-      },
-      {
-        "id": "5",
-        "question": "Traktördeki iki bataryadan biri çıkarılırsa, aracın gittiği yol nasıl olur?",
-        "choices": ["Yolun yarısını gider", "Aynı yolu alır"],
-        "correctAnswerIdx": 0,
-        "answerVideoId": "FP-UxOEuSAE"
-      },
-      {
-        "id": "6",
-        "question": "Traktördeki güneş paneli sayısı artarsa ne olur?",
-        "choices": ["Daha hızlı elektrik depolar", "Daha fazla yol gider"],
-        "correctAnswerIdx": 0,
-        "answerVideoId": "7fKS-v4uOgQ"
-      },
-      {
-        "id": "7",
-        "question": "Traktörün 10 cm’den daha fazla yol gitmesini istersek, tasarımda neyi değiştirirsin?",
-        "choices": ["Batarya sayısını artırmak", "Panel sayısını artırmak"],
-        "correctAnswerIdx": 0,
-        "answerVideoId": "ivAC9B2iPmY"
-      },
-      {
-        "id": "8",
-        "question": "Güneş paneli traktörün çatısına yerleştirilirse, traktörün elektrik depolamasında ne değişir?",
-        "choices": ["Daha yavaş elektrik depolar", "Daha fazla elektrik depolar"],
-        "correctAnswerIdx": 1,
-        "answerVideoId": "6Rwagw8Ulyo"
-      }
-    ]
-  }
+  "questions": [
+    {
+      "id": "1",
+      "question": "Güneş paneli traktörün çatısına yerleştirilirse, traktörün elektrik depolamasında ne değişir?",
+      "choices": ["Daha yavaş elektrik depolar", "Daha fazla elektrik depolar"],
+      "correctAnswerIdx": 1,
+      "answerVideoId": "acZogxoUdEI"
+    },
+    {
+      "id": "2",
+      "question": "Öğle saatinde güneş ışınları dik geldiğinde, traktörün elektrik depolama hızı nasıl olur?",
+      "choices": ["Daha uzun sürer", "Süre değişmez"],
+      "correctAnswerIdx": 0,
+      "answerVideoId": "Oq65P_BzoQo"
+    },
+    {
+      "id": "3",
+      "question": "Traktördeki güneş paneli sayısı artarsa ne olur?",
+      "choices": ["Daha hızlı elektrik depolar", "Daha fazla yol gider"],
+      "correctAnswerIdx": 0,
+      "answerVideoId": "3K27V2mfN2Y"
+    },
+    {
+      "id": "4",
+      "question": "Traktörün 10 cm’den daha fazla yol gitmesini istersek, tasarımda neyi değiştirirsin?",
+      "choices": ["Batarya sayısını artırmak", "Panel sayısını artırmak"],
+      "correctAnswerIdx": 0,
+      "answerVideoId": "EMgVL7HmGTQ"
+    },
+    {
+      "id": "5",
+      "question": "Traktördeki iki bataryadan biri çıkarılırsa, aracın gittiği yol nasıl olur?",
+      "choices": ["Yolun yarısını gider", "Aynı yolu alır"],
+      "correctAnswerIdx": 0,
+      "answerVideoId": "FEm0K2Hxs_U"
+    },
+    {
+      "id": "6",
+      "question": "Traktördeki güneş paneli sayısı artarsa ne olur?",
+      "choices": ["Daha hızlı elektrik depolar", "Daha fazla yol gider"],
+      "correctAnswerIdx": 0,
+      "answerVideoId": "3K27V2mfN2Y"
+    },
+    {
+      "id": "7",
+      "question": "Traktörün 10 cm’den daha fazla yol gitmesini istersek, tasarımda neyi değiştirirsin?",
+      "choices": ["Batarya sayısını artırmak", "Panel sayısını artırmak"],
+      "correctAnswerIdx": 0,
+      "answerVideoId": "EMgVL7HmGTQ"
+    },
+    {
+      "id": "8",
+      "question": "Güneş paneli traktörün çatısına yerleştirilirse, traktörün elektrik depolamasında ne değişir?",
+      "choices": ["Daha yavaş elektrik depolar", "Daha fazla elektrik depolar"],
+      "correctAnswerIdx": 1,
+      "answerVideoId": "acZogxoUdEI"
+    }
+  ]
+}

@@ -11,7 +11,7 @@ function Game() {
   const [player2Score, setPlayer2Score] = useState(0);
   const [currentPlayer, setCurrentPlayer] = useState(1);
   const [autoplay, setAutoplay] = useState(0);
-  const [questionVideo, setQuestionVideo] = useState("kpKhowg2Wpc");
+  const [questionVideo, setQuestionVideo] = useState("hPaYbHvODok");
 
   const onSubmit = (correct) => {
     if (correct) {
